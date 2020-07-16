@@ -1,3 +1,17 @@
+function setBackgroundWithDuration(color, duration){
+    d3.select("body")   // select element to work
+        .transition()
+        .duration(duration) // set duration
+        .style("background-color", color);  // set background color
+}
+
+function setTextColor(color, duration){
+    d3.selectAll("p")   // select elements to work (all "p" elements on page)
+        .transition()
+        .duration(duration) // set duration
+        .style("color", color); // set background color
+}
+
 function setBgBlack(){
     setBackgroundWithDuration("black");
 }
@@ -10,9 +24,14 @@ function setBgWhite(){
     setBackgroundWithDuration("white");
 }
 
-function setBackgroundWithDuration(color, duration){
-    d3.select("body")
-        .transition()
-        .duration(duration)
-        .style("background-color", color);
+function setRedTextColor(){
+    setTextColor("red");
+}
+
+function setBlueTextColorWithDuration(){
+    setTextColor("blue", 750);
+}
+
+function setDefaultTextColor(){
+    setTextColor("black");
 }
