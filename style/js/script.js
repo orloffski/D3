@@ -17,6 +17,15 @@ function addTextToElement(text){
         .html(text);  // add text
 }
 
+function addNewElement(){
+    d3.select("div[class=elements]").append("p").text("New paragraph.");
+}
+
+function deleteAllParentElements(){
+    //d3.select("div[class=elements]").html("");    // variant 1
+    d3.select("div[class=elements]").selectAll("*").remove();   // variant 2
+}
+
 function setBgBlack(){
     setBackgroundWithDuration("black");
 }

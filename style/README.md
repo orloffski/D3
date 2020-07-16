@@ -7,3 +7,6 @@
 
 Добавление текста в элемент div: <br/>
 ![Optional Text](../gifs/text_add.gif)
+
+Создание и удаление элементов разметки: <br/>
+![Optional Text](../gifs/create_delete.gif)
