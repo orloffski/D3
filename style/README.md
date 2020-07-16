@@ -4,3 +4,6 @@
 
 Изменение цвета текста на примере всех элементов p: <br/>
 ![Optional Text](../gifs/text_color.gif)
+
+Добавление текста в элемент div: <br/>
+![Optional Text](../gifs/text_add.gif)

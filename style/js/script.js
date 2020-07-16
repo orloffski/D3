@@ -12,6 +12,11 @@ function setTextColor(color, duration){
         .style("color", color); // set background color
 }
 
+function addTextToElement(text){
+    d3.select("div[class=text]")
+        .html(text);  // add text
+}
+
 function setBgBlack(){
     setBackgroundWithDuration("black");
 }
@@ -34,4 +39,12 @@ function setBlueTextColorWithDuration(){
 
 function setDefaultTextColor(){
     setTextColor("black");
+}
+
+function addText(){
+    addTextToElement("Hello, world!");
+}
+
+function clearText(){
+    addTextToElement("");
 }
