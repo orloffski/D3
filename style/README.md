@@ -1,10 +1,10 @@
 # Примеры манипуляции элементами и их свойствами
 
-### Изменение фона страницы на примете стилизации body: <br/>
+### Изменение фона страницы на примете стилизации div class=card: <br/>
 ![Optional Text](../gifs/background_color.gif)
 ```javascript
 function setBackgroundWithDuration(color, duration){
-    d3.select("body")
+    d3.select("div[class=card]")
         .transition()
         .duration(duration)
         .style("background-color", color);
@@ -19,11 +19,11 @@ setBackgroundWithDuration("black", 750);
 setBackgroundWithDuration("white");
 ```
 ***
-### Изменение цвета текста на примере всех элементов p: <br/>
+### Изменение цвета текста на примере всех элементов div class=description: <br/>
 ![Optional Text](../gifs/text_color.gif)
 ```javascript
 function setTextColor(color, duration){
-    d3.selectAll("p")
+    d3.selectAll("div[class=description]")
         .transition()
         .duration(duration)
         .style("color", color);
@@ -48,7 +48,15 @@ function addTextToElement(text){
 ```
 call:
 ```javascript
-addTextToElement("Hello, world!");
+addTextToElement(
+        "<div class='event'>" + 
+        "<div class='content'>" + 
+          "<div class='summary'>" + 
+             "<a>Elliot Fu</a> added <a>Jenny Hess</a> to the project" + 
+          "</div>" + 
+        "</div>" + 
+      "</div>"
+    );
 ...
 addTextToElement("");
 ```
@@ -59,7 +67,15 @@ addTextToElement("");
 create element:
 ```javascript
 function addNewElement(){
-    d3.select("div[class=elements]").append("p").text("New paragraph.");
+    d3.select("div[class=elements]").append("p").html(
+        "<div class='event'>" + 
+        "<div class='content'>" + 
+          "<div class='summary'>" + 
+             "<a>Elliot Fu</a> added <a>Jenny Hess</a> to the project" + 
+          "</div>" + 
+        "</div>" + 
+      "</div>"
+    );
 }
 ```
 delete all elements (variant 1):
