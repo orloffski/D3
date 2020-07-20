@@ -1,7 +1,7 @@
 # Примеры диаграмм
 
 ### Горизонтальная диаграмма: <br/>
-![Optional Text](../png/horizontal_chart.gif)
+![Optional Text](../png/horizontal_chart.png)
 ```javascript
 var data = [4, 8, 11, 16, 18, 23, 42, 43];
 
