@@ -64,7 +64,13 @@ addTextToElement("");
 ### Создание и удаление элементов разметки: <br/>
 ![Optional Text](../gifs/create_delete.gif)
 
-create element:
+create element (variant 1):
+```javascript
+function addNewElement(){
+    d3.select("div[class=elements]").append("p").text("New paragraph.");
+```
+
+create element (variant 2):
 ```javascript
 function addNewElement(){
     d3.select("div[class=elements]").append("p").html(
