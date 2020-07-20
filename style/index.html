@@ -74,13 +74,27 @@
                     </div>
                     <div class="title">
                         <i class="dropdown icon"></i>
-                        Create text
+                        Add text to element
                     </div>
                     <div class="content">
                         <p class="transition hidden">
-                            <div class="text"></div>
-                            <button onclick="addText()">Add text</button>
-                            <button onclick="clearText()">Clear text</button>
+                            <div class="ui card">
+                                <div class="content">
+                                    <div class="header">Project Timeline</div>
+                                </div>
+                                <div class="content">
+                                    <h4 class="ui sub header">Activity</h4>
+                                    <div class="ui small feed">
+                                        <div class="text"></div>
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <div class="ui buttons">
+                                        <div class="ui olive basic button" onclick="addText()">Add text</div>
+                                        <div class="ui olive basic button" onclick="clearText()">Clear text</div>
+                                    </div> 
+                                </div>
+                            </div>
                         </p>
                     </div>
                     <div class="title">
@@ -88,12 +102,25 @@
                         Create elements
                     </div>
                     <div class="content">
-                        <p>
-                            <div class="elements"></div>
-                            <button onclick="addNewElement()">Add element</button>
-                            <button onclick="deleteAllParentElements()">Reset</button>
+                        <p class="transition hidden">
+                            <div class="ui card">
+                                <div class="content">
+                                    <div class="header">Project Timeline</div>
+                                </div>
+                                <div class="content">
+                                    <h4 class="ui sub header">Activity</h4>
+                                    <div class="ui small feed">
+                                        <div class="elements"></div>
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <div class="ui buttons">
+                                        <div class="ui olive basic button" onclick="addNewElement()">Add element</div>
+                                        <div class="ui olive basic button" onclick="deleteAllParentElements()">Reset</div>
+                                    </div> 
+                                </div>
+                            </div>
                         </p>
-                        <p>Some text</p>
                     </div>
                 </div>
             </div>

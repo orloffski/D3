@@ -18,7 +18,16 @@ function addTextToElement(text){
 }
 
 function addNewElement(){
-    d3.select("div[class=elements]").append("p").text("New paragraph.");
+    //d3.select("div[class=elements]").append("p").text("New paragraph.");  // Variant 1
+    d3.select("div[class=elements]").append("p").html(
+        "<div class='event'>" + 
+        "<div class='content'>" + 
+          "<div class='summary'>" + 
+             "<a>Elliot Fu</a> added <a>Jenny Hess</a> to the project" + 
+          "</div>" + 
+        "</div>" + 
+      "</div>"
+    )   // Variant 2
 }
 
 function deleteAllParentElements(){
@@ -51,7 +60,15 @@ function setDefaultTextColor(){
 }
 
 function addText(){
-    addTextToElement("Hello, world!");
+    addTextToElement(
+        "<div class='event'>" + 
+        "<div class='content'>" + 
+          "<div class='summary'>" + 
+             "<a>Elliot Fu</a> added <a>Jenny Hess</a> to the project" + 
+          "</div>" + 
+        "</div>" + 
+      "</div>"
+    );
 }
 
 function clearText(){
