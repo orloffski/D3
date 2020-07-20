@@ -3,29 +3,103 @@
     <head>
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body style="background-color: rgb(255, 255, 255);">
-
-        <p>Background color changes</p>
-        <button onclick="setBgBlack()">Black</button>
-        <button onclick="setBgBlackDuration()">Black with duration</button>
-        <button onclick="setBgWhite()">Reset</button>
-
-        <p>Text color changes</p>
-        <button onclick="setRedTextColor()">Red text</button>
-        <button onclick="setBlueTextColorWithDuration()">Blue text with duration</button>
-        <button onclick="setDefaultTextColor()">Reset</button>
-
-        <p>Create text</p>
-        <div class="text"></div>
-        <button onclick="addText()">Add text</button>
-        <button onclick="clearText()">Clear text</button>
-
-        <p>Create elements</p>
-        <div class="elements"></div>
-        <button onclick="addNewElement()">Add element</button>
-        <button onclick="deleteAllParentElements()">Reset</button>
-
+        <link rel="stylesheet" type="text/css" href="../semantic/semantic.min.css">
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="semantic/dist/semantic.min.js"></script>
+        <script src="../semantic/components/accordion.js"></script>
+ </head>
+    <body style="padding-top: 25px;">
+        <div class="ui two column centered grid">
+            <div class="column">
+                <div class="ui styled accordion">
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        Background and text color changes
+                    </div>
+                    <div class="content">
+                        <p class="transition hidden">
+                            <div class="ui cards">
+                                <div class="card">
+                                    <div class="content">
+                                        <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+                                        <div class="header">
+                                            Elliot Fu
+                                        </div>
+                                        <div class="meta">
+                                            Friends of Veronika
+                                        </div>
+                                        <div class="description">
+                                            Elliot requested permission to view your contact details
+                                        </div>
+                                    </div>
+                                    <div class="extra content">
+                                        <div class="ui centered grid">
+                                            <div class="four column row">Background changes</div>  
+                                            <div class="four column row"></div>
+                                        </div>  
+                                        <div class="ui buttons">
+                                            <div class="ui olive basic button" onclick="setBgBlack()">Black</div>
+                                            <div class="ui olive basic button" onclick="setBgBlackDuration()">Black 750d</div>
+                                            <div class="ui olive basic button" onclick="setBgWhite()">White</div>
+                                        </div>                             
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="content">
+                                        <img class="right floated mini ui image" src="/images/avatar/large/elliot.jpg">
+                                        <div class="header">
+                                            Elliot Fu
+                                        </div>
+                                        <div class="meta">
+                                            Friends of Veronika
+                                        </div>
+                                        <div class="description">
+                                            Elliot requested permission to view your contact details
+                                        </div>
+                                    </div>
+                                    <div class="extra content">
+                                        <div class="ui centered grid">
+                                            <div class="four column row">Text color changes</div>  
+                                            <div class="four column row"></div>
+                                        </div>    
+                                        <div class="ui buttons">
+                                            <div class="ui olive basic button" onclick="setRedTextColor()">Red</div>
+                                            <div class="ui olive basic button" onclick="setBlueTextColorWithDuration()">Blue 750d</div>
+                                            <div class="ui olive basic button" onclick="setDefaultTextColor()">Reset</div>
+                                        </div>                             
+                                    </div>
+                                </div>
+                            </div>                            
+                        </p>
+                    </div>
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        Create text
+                    </div>
+                    <div class="content">
+                        <p class="transition hidden">
+                            <div class="text"></div>
+                            <button onclick="addText()">Add text</button>
+                            <button onclick="clearText()">Clear text</button>
+                        </p>
+                    </div>
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        Create elements
+                    </div>
+                    <div class="content">
+                        <p>
+                            <div class="elements"></div>
+                            <button onclick="addNewElement()">Add element</button>
+                            <button onclick="deleteAllParentElements()">Reset</button>
+                        </p>
+                        <p>Some text</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+   
         <script src="https://d3js.org/d3.v5.min.js"></script>
         <script src="js/script.js"></script>
     

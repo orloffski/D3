@@ -1,12 +1,12 @@
 function setBackgroundWithDuration(color, duration){
-    d3.select("body")   // select element to work
+    d3.select("div[class=card]")   // select first element to work
         .transition()
         .duration(duration) // set duration
         .style("background-color", color);  // set background color
 }
 
 function setTextColor(color, duration){
-    d3.selectAll("p")   // select elements to work (all "p" elements on page)
+    d3.selectAll("div[class=description]")   // select elements to work (all "div[class=description]" elements on page)
         .transition()
         .duration(duration) // set duration
         .style("color", color); // set background color
@@ -57,3 +57,7 @@ function addText(){
 function clearText(){
     addTextToElement("");
 }
+
+$(document).ready(function(){
+    $('.ui.accordion').accordion();
+ });
